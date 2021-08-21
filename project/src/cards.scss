@@ -1,0 +1,185 @@
+.container {
+    max-width: 1550px;
+    margin:  0 auto;
+}
+
+.main-page {
+    background-image: url('/src/assets/img/background.png');
+    background-position: top;
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
+    background-color: #16151F;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    &-single {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 54px;
+        background: #212031;
+        border-radius: 10px 10px 0px 0px;
+        
+        &__text {
+            color: #9794C6;
+            opacity: 0.5;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            transition: .4s;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+    &-single::after {
+        color: #fff;
+        background: linear-gradient(90deg, #F52CBF 0%, #FF7C46 100%);
+        display: block;
+        content: "";
+        height: 3px;
+        width: 0;
+        transition: .4s;
+
+    }
+    &-single:hover::after{
+        width: 100%;
+    }
+    &-single:hover .links-single__text {
+        color: white;
+        opacity: 1;
+        transition: .4s;
+    }
+
+}
+.main-page>#content1:target~.links>.links-single[href="#content-2"] {
+    cursor: pointer;
+}
+
+
+.content {
+    background: #242333;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    .title {
+        font-family: Leksa Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        text-align: center;
+        padding: 25px 0;
+    }
+}
+.content.another {
+    border-top:1px solid rgba(151, 148, 198, .1);
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    &-item {
+        background-image: url('/src/assets/img/card.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        height: auto;
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            height: 100%;
+        }
+        &__top {
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__bottom {
+            height: 45%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__number, &__name {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 130%;
+        }
+        &__number {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .cards-item__back-button {
+            background: linear-gradient(90deg, rgba(104, 47, 189, 1) 0%, rgba(203, 76, 188, 1) 100%);
+            border-radius: 146px;
+            padding: 2px;
+            width: 75%;
+            margin-top: 20px;
+            transition: .4s;
+        }
+        .cards-item__back-button:hover .cards-item__button {
+            background: transparent;
+            transition: .4s;
+            
+        }
+        .cards-item__back-button:hover .cards-item__button__buy, .cards-item__back-button:hover .cards-item__button__number {
+            color: black;
+            transition: .4s;
+            font-size: 18px;
+        }
+        .cards-item__back-button:hover .cards-item__button__symbol {
+            right: 7px;
+            transition: .4s;
+        }
+        &__button {
+            background: linear-gradient(90deg, #242333 0%, #3C3B53 100%);
+            border-radius: 146px;
+            height: 47px;
+            border: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            cursor: pointer;
+            &buy {
+                transition: .4s;
+            }
+            &__price {
+                display: flex;
+                font-weight: 500;
+            }
+            &__symbol {
+                position: relative;
+                right: 0px;
+
+                transition: .4s;
+
+            }
+            &__number{
+                margin-left: 3px;
+                transition: .4s;
+            }
+        }
+    }
+}

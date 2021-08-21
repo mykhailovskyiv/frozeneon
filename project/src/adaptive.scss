@@ -1,0 +1,134 @@
+@media(min-width: 2700px) {
+    .header-content {
+        max-width: 80%;
+    }
+    .main-page {
+        background-size: 100% 1200px;
+        padding-top: 200px;
+        padding-bottom: 1200px;
+    }
+    .container {
+        max-width: 2550px;
+    }
+    .cards {
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 3rem;
+        margin-top: 50px;
+    }
+    .cards-item__content {
+        padding-bottom: 45px;
+    }
+}
+@media(max-width:1550px) {
+    .container {
+        max-width: 1130px;
+    }
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        &-item {
+            padding: 2rem;
+        }
+    }
+}
+@media(max-width:1280px) {
+    .container {
+        max-width: 730px;
+    }
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        &-item {
+            padding: 1rem;
+        }
+    }
+}
+@media(max-width:768px) {
+    .container {
+        max-width: 320px;
+    }
+    .header-content {
+        width: 100%;
+        &__button {
+            border: none;
+            width: auto;
+
+        }
+        &__button:hover .button-back {
+            left: 0px;
+        }
+        &__button:hover .button-home {
+            left: 0px;
+        }
+    }
+    .header-content__button__text {
+        display: none;
+    }
+    .header-content-buy--image {
+        width: 30%;
+        position: relative;
+        left: 20px;
+    }
+    .header-content-buy--button {
+        padding: 0 0 0 20px;
+        height: 20px;
+        .plus {
+            border-radius: 3px;
+            width: 18px;
+            height: 18px;
+        }
+        .queque {
+            margin-right: 5px;
+            margin-left: 0px;
+        }
+    }
+    .queque-text {
+        display: none;
+    }
+    .links {
+        grid-gap: 0px;
+        &-single {
+            border-radius: 0px;
+            &__text {
+                font-size: 14px;
+                line-height: 18px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        &-item {
+            padding: 0;
+            &__content {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 0px;
+            }
+            &__top {
+                height: 35%;
+                img {
+                    width: 60%;
+                }
+            }
+            &__number {
+                font-size: 20px;
+            }
+            &__button {
+                height: 27px;
+            }
+            &__name {
+                font-size: 14px;
+            }
+        }
+
+        .cards-item__back-button:hover .cards-item__button__buy, .cards-item__back-button:hover .cards-item__button__number {
+            color: black;
+            transition: .4s;
+            font-size: 16px;
+        }
+        .cards-item__back-button:hover .cards-item__button__symbol {
+            right: 2px;
+            transition: .4s;
+        }
+    }
+}

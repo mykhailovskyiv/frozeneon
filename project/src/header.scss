@@ -1,0 +1,95 @@
+.header {
+    background-image: url('/src/assets/img/header-background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-background {
+        background: linear-gradient(180deg, rgba(7, 5, 10, 1) 0%, rgba(0, 0, 0, .88) 100%);
+    }
+    &-content {
+        width: 90%;
+        margin:  0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            background: transparent;
+            width: 139px;
+            height: 54px;
+            position: relative;
+            border: 2px solid rgba(151, 148, 198, .1);
+            position: relative;
+            cursor: pointer;
+            &__text {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                text-transform: uppercase;
+            }
+            .button-back {
+                position: relative;
+                left: 0px;
+                transition: .4s;
+            }
+            .button-home {
+                position: relative;
+                left: 0px;
+                transition: .4s;
+            }
+
+        }
+        &__button:hover .button-back {
+            left: -18px;
+            transition: .4s;
+        }
+        &__button:hover .button-home {
+            left: -18px;
+            transition: .4s;
+        }
+        &-buy {
+            display: flex;
+            &--item {
+                display: flex;
+                align-items: center;
+            }
+            &--image {
+                position: relative;
+                left: 50px;
+            }
+            &--button {
+                background: #0D0B0F;
+                border-radius: 100px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                border: none;
+                padding: 0 20px 0 40px;
+                .queque {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .plus {
+                    cursor: pointer;
+                    width: 25px;
+                    height: 25px;
+                    background: linear-gradient(90deg, #30C325 9.09%, #2C812A 100%);
+                    border: 1px solid #21CC14;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    transform: rotate(-90deg);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
