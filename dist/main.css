@@ -120,6 +120,8 @@ p, a, span, h1, h2, h3, h4, li, button {
   align-items: center;
   border: none;
   padding: 0 20px 0 40px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .header-content-buy--button .queque {
   margin-left: 20px;
@@ -156,6 +158,18 @@ p, a, span, h1, h2, h3, h4, li, button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.header-content-buy--item:hover .header-content-buy--button {
+  background: #c974fa;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header-content-buy--item:hover .queque-text, .header-content-buy--item:hover .queque-number {
+  color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .container {
   max-width: 1550px;
