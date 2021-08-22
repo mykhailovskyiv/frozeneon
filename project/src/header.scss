@@ -68,6 +68,7 @@
                 align-items: center;
                 border: none;
                 padding: 0 20px 0 40px;
+                transition: .4s;
                 .queque {
                     margin-left: 20px;
                     margin-right: 20px;
@@ -92,4 +93,11 @@
         }
     }
 }
-
+.header-content-buy--item:hover .header-content-buy--button {
+    background: #c974fa;
+    transition: .4s;
+}
+.header-content-buy--item:hover .queque-text, .header-content-buy--item:hover .queque-number {
+    color: black;
+    transition: .4s;
+}
